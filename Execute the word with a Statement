@@ -1,0 +1,13 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String chr = sc.next();
+        System.out.println("May I know how to learn "+chr+"!!!...");
+    }
+}
