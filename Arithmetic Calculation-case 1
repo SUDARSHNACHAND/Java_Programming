@@ -3,35 +3,39 @@ import java.util.*;
 import java.text.*;
 import java.math.*;
 import java.util.regex.*;
-public class Main {
+
+public class Solution {
+
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int a = sc.nextInt();
-        int b = sc.nextInt();
-        char op = sc.next().charAt(0);
-        switch (op) {
-            case '+':
-            System.out.println("Addition of two number is " + (a + b) + ".0");
-            break;
-            case '-':
-            System.out.println("Subtraction of two number is " + (a - b) + ".0");
-             break;
-            case '*':
-            System.out.println("Multiplication of two number is " + (a * b) + ".0");
-            break;
-             case '/':
-             if (b != 0)
-             System.out.println("Division of two number is " + ((double) a / b));
-             else
-             System.out.println("Invalid Input");
-             break;
-            case '%':
-            if (b != 0)
-            System.out.println("Modulo of two number is " + (a % b) + ".0");
-            else
-            System.out.println("Invalid Input");
-            break;
+        Scanner s=new Scanner(System.in);
+        int a =s.nextInt();
+        int b =s.nextInt();
+        char c=s.next().charAt(0);
+        switch(c){
+                case'+':
+                    float add=a+b;
+                    System.out.println("Addition of two number is " + add);
+                    break;
+                case'-':
+                    float sub=a-b;
+                    System.out.println("Subtraction of two number is " + sub);
+                    break;
+                case'*':
+                    float mul=a*b;
+                    System.out.println("Multiplication of two number is " + mul);
+                    break;
+                case'/':
+                    float div=a/b;
+                    System.out.println("Division of two number is " + div);
+                    break;
+                case'%':
+                    float mod=a%b;
+                    System.out.println("Modulo of two number is " + mod);
+                    break;
             default:
-             System.out.println("Invalid Input"); }
+                    System.out.println("Invalid Input");
+                
+        }
+        
     }
 }
