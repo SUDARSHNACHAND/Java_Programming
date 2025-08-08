@@ -7,12 +7,20 @@ import java.util.regex.*;
 public class Solution {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        int N = n, sum = 0;
-        while (n > 0) {
-            int digit = n % 10;
+        int num = sc.nextInt();
+        if (num<100||num>999) {
+            System.out.println("No");
+            return;}
+        int original = num;
+        int sum = 0;
+        while (num > 0) {
+            int digit = num % 10;
             sum += digit * digit * digit;
-            n /= 10; }
-        System.out.println(sum == N ? "Yes" : "No");
+            num /= 10;}
+        if (sum == original) {
+            System.out.println("Yes");} 
+        else {
+            System.out.println("No");
+        }
     }
 }
