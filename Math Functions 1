@@ -4,23 +4,16 @@ import java.text.*;
 import java.math.*;
 import java.util.regex.*;
 
-public class MathFunctions {
+public class Solution {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-
-        double floatValue = sc.nextDouble(); 
-        int squareValue = sc.nextInt();      
-        int base = sc.nextInt();             
-        int power = sc.nextInt();            
-
-        int floorValue = (int)Math.floor(floatValue);
-        int ceilValue = (int)Math.ceil(floatValue);
-        int sqrtValue = (int)Math.sqrt(squareValue);
-        int powValue = (int)Math.pow(base, power);
- 
-        System.out.println(floorValue);
-        System.out.println(ceilValue);
-        System.out.println(sqrtValue);
-        System.out.println(powValue);
+    Scanner scan=new Scanner(System.in);
+    float f=scan.nextFloat();
+    int i=scan.nextInt();
+    int j=scan.nextInt();
+    int k=scan.nextInt();
+System.out.println((int)Math.floor(f)); 
+System.out.println((int)Math.ceil(f));
+ System.out.println((int)Math.sqrt(i));
+    System.out.println((int)Math.pow(j,k));       
     }
 }
