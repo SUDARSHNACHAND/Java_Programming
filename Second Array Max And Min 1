@@ -1,0 +1,25 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt(); 
+        int[] arr = new int[n];
+        for (int i = 0; i < n; i++) arr[i] = sc.nextInt();
+        int[] even = new int[n / 2 + 1];
+        int[] odd = new int[n / 2 + 1];
+        int e = 0, o = 0;
+        for (int i = 0;i<n;i++) {
+            if (i%2==0) even[e++] = arr[i];
+            else odd[o++] = arr[i]; }
+        Arrays.sort(even, 0, e);
+        Arrays.sort(odd, 0, o);
+        int SLE = e >= 2 ? even[e - 2] : even[e - 1];
+        int SSO = o >= 2 ? odd[1] : odd[0];
+        System.out.println("Sum=" + (SLE + SSO));
+    }
+}
