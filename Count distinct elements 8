@@ -1,0 +1,16 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        Set<Integer> distinct = new HashSet<>();
+        for (int i = 0; i < n; i++) distinct.add(sc.nextInt());
+        System.out.println("There are " + distinct.size() + 
+            (distinct.size() == 1 ? " distinct element" : " distinct elements") + " in the array.");
+    }
+}
